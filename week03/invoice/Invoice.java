@@ -52,5 +52,8 @@ public class Invoice {
     public double getPricePerItem(){
         return pricePerItem;
     }
-      
+    
+    public double getInvoiceAmount(){
+        return itemQuantity * pricePerItem;
+    }
 }
