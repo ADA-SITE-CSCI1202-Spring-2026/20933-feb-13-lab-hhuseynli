@@ -9,8 +9,8 @@ public class Invoice {
     Invoice (String partNumber, String partDescription, int itemQuantity, double pricePerItem){
         this.partNumber = partNumber;
         this.partDescription = partDescription;
-        this.itemQuantity = itemQuantity;
-        this.pricePerItem = pricePerItem;
+        setItemQuantity(itemQuantity);
+        setPricePerItem(pricePerItem);
     }
 
     public void setPartNumber(String partNumber){
@@ -22,11 +22,19 @@ public class Invoice {
     }
 
     public void setItemQuantity(int itemQuantity){
-        this.itemQuantity = itemQuantity;
+        if (itemQuantity > 0){
+            this.itemQuantity = itemQuantity;
+        } else {
+            this.itemQuantity = 0;
+        }
     }
     
     public void setPricePerItem(double pricePerItem){
-        this.pricePerItem = pricePerItem;
+        if (pricePerItem > 0){
+            this.pricePerItem = pricePerItem;
+        } else {
+            this.pricePerItem = 0.0;
+        }
     }
 
     public String getPartNumber(){
