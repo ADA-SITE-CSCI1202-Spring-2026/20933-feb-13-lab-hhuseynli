@@ -14,6 +14,12 @@ public class InvoiceTest {
               
         System.out.printf("\nParts %s are %s bought %d times with a price of $%.2f per item. This costs $%.2f in total.\n\n",
          invalid.getPartNumber(), invalid.getPartDescription(), invalid.getItemQuantity(), invalid.getPricePerItem(), invalid.getInvoiceAmount());
+        
+        invalid.setItemQuantity(10);
+        invalid.setPricePerItem(5.423);
+        
+        System.out.printf("\nParts %s are %s bought %d times with a price of $%.2f per item. This costs $%.2f in total.\n\n",
+         invalid.getPartNumber(), invalid.getPartDescription(), invalid.getItemQuantity(), invalid.getPricePerItem(), invalid.getInvoiceAmount());
 
     }
 }
