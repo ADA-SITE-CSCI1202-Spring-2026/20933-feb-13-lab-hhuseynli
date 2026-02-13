@@ -1,5 +1,4 @@
 package week03.invoice;
-import week03.invoice.Invoice;
 
 public class InvoiceTest {
     public static void main(String[] args) {
